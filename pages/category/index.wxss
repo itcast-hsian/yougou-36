@@ -22,4 +22,22 @@ page{
   height: 100rpx;
   line-height: 100rpx;
   text-align: center;
+  border-bottom: 1px #ddd solid;
+}
+
+.active{
+  background: #fff;
+  color:red;
+  position: relative;
+}
+
+.active::before{
+  display: block;
+  content: "";
+  width:3px;
+  height: 60rpx;
+  background:red;
+  position: absolute;
+  left: 0;
+  top: 20rpx;
 }
