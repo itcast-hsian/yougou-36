@@ -1,2 +1,15 @@
-<!--pages/category/index.wxml-->
-<text>pages/category/index.wxml</text>
+<!-- 导入头部的组件 -->
+<search/>
+
+<view class="container">
+  <view class="menu">
+    <view class="menu-item" 
+    wx:for="{{ [1,1,1,11,1,1,1,1,11,1,1,11,1] }}"
+    wx:key="{{ index }}">
+      电器{{index}}
+    </view>
+  </view>
+  <view class="content">
+    会变的内容
+  </view>
+</view>
