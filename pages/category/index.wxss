@@ -23,6 +23,7 @@ page{
   line-height: 100rpx;
   text-align: center;
   border-bottom: 1px #ddd solid;
+  font-size:14px;
 }
 
 .active{
@@ -60,13 +61,13 @@ page{
 
 .brand-item{
   width:33.33%;
-  padding:20rpx;
+  text-align: center;
   box-sizing: border-box;
 }
 
 .brand-item image{
-  width:100%;
-  max-height: 200rpx;
+  width:120rpx;
+  max-height: 120rpx;
 }
 
 .brand-text{

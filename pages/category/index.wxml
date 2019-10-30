@@ -5,29 +5,33 @@
   <!-- 左侧的菜单列表 -->
   <view class="menu">
     <view class="menu-item {{ current === index ? 'active': ''}}" 
-    wx:for="{{ [1,1,1,11,1,1,1,1,11,1,1,11,1] }}"
+    wx:for="{{ list }}"
     wx:key="{{ index }}"
     bindtap="handleChange"
     data-index="{{index}}">
-      电器{{index}}
+      {{ item.cat_name }}
     </view>
   </view>
 
   <!-- 右边的品牌列表 -->
   <view class="content">
     
-    <!-- 标题 -->
-    <view class="brand-title">电视</view>
+    <view 
+    wx:for="{{ list[current].children }}"
+    wx:key="{{index}}">
+      <!-- 标题 -->
+      <view class="brand-title">{{ item.cat_name }}</view>
 
-    <view class="brands">
-      <navigator 
-      url="" 
-      class="brand-item" 
-      wx:for="{{ [1,1,1,1,1,1,1,1,1,1,1,1] }}"
-      wx:key="{{index}}">
-        <image src="https://t00img.yangkeduo.com/goods/images/2019-08-01/777f7ec5bf3db9fde7aec13478b2eb16.jpeg" mode="aspectFill"></image>
-        <view class="brand-text">曲面电视</view>
-      </navigator>
+      <view class="brands">
+        <navigator 
+        url="" 
+        class="brand-item" 
+        wx:for="{{ item.children }}"
+        wx:key="{{index}}">
+          <image src="{{ item.cat_icon }}" mode="aspectFill"></image>
+          <view class="brand-text">{{ item.cat_name }}</view>
+        </navigator>
+      </view>
     </view>
 
   </view>
