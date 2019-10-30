@@ -25,22 +25,27 @@
 </view>
 
 <!-- 楼层列表 -->
-<view class="floor-title">
-  <image mode="aspectFill" src="https://cdn.pinduoduo.com/home/static/img/index/seckill_v2.jpg"></image>
-</view>
-
-<view class="floor">
-  <!-- 左侧的大图 -->
-  <view class="left">
-    <navigator url="">
-      <image src="https://img11.360buyimg.com/babel/s580x740_jfs/t1/66369/22/14161/29601/5db85118E5505db15/a286de753ad4f716.jpg!cc_290x370.webp"></image>
-    </navigator>
+<view wx:for="{{floors}}" wx:key="{{index}}">
+  <view class="floor-title">
+    <image mode="aspectFill" src="{{item.floor_title.image_src}}"></image>
   </view>
 
-  <!-- 右侧的四张小图 -->
-  <view class="right">
-    <navigator url="" wx:for="{{ [9,9,9,9] }}" wx:key="{{index}}">
-      <image src="https://cdn.pinduoduo.com/home/static/img/subject/food.jpg"></image>
-    </navigator>
+  <view class="floor">
+    <!-- 左侧的大图 -->
+    <view class="left">
+      <navigator url="{{ item.product_list[0].navigator_url }}">
+        <image src="{{ item.product_list[0].image_src }}"></image>
+      </navigator>
+    </view>
+
+    <!-- 右侧的四张小图 -->
+    <view class="right">
+      <navigator url="{{ item.navigator_url }}" 
+      wx:for="{{ item.product_list }}" 
+      wx:key="{{index}}"
+      wx:if="{{ index > 0 }}">
+        <image src="{{ item.image_src }}"></image>
+      </navigator>
+    </view>
   </view>
 </view>

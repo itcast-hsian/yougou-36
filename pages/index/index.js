@@ -5,13 +5,10 @@ Page({
   data: {
     // 轮播图数据
     banners: [],
-
-    menus: [
-      "../../images/cart_empty@2x.png",
-      "../../images/cart_empty@2x.png",
-      "../../images/cart_empty@2x.png",
-      "../../images/cart_empty@2x.png",
-    ]
+    // 菜单数据
+    menus: [],
+    // 楼层数据
+    floors: []
   },
   
   onLoad(){
@@ -39,6 +36,15 @@ Page({
       })
     })
 
+    request({
+      url: "/api/public/v1/home/floordata"
+    }).then(res => {
+      const {message} = res.data;
+      // 赋值给data中floors
+      this.setData({
+        floors: message
+      })
+    })
   }
 
 })
