@@ -1,2 +1,8 @@
-<!--components/search/index.wxml-->
-<text>components/search/index.wxml</text>
+<!-- 搜索栏 -->
+<view class="search">
+  <view class="search-input">
+  <!-- 小程序原生的组件 -->
+    <icon type="search" size="16"></icon>
+    搜索
+  </view>
+</view>
