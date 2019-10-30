@@ -1,0 +1,19 @@
+.search{
+  background:#ff2d4a;
+  padding: 20rpx;
+}
+
+.search .search-input{
+  background: #fff;
+  height:60rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  color:#999;
+  border-radius: 4px;
+}
+
+.search .search-input icon{
+  margin-right:10rpx;
+}
