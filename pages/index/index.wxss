@@ -18,3 +18,13 @@
   margin-right:10rpx;
 }
 
+.menus{
+  display: flex;
+  justify-content: space-around;
+  padding: 20rpx 0;
+}
+
+.menus image{
+  width: 100rpx;
+  height: 100rpx;
+}

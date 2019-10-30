@@ -16,3 +16,12 @@
     </swiper-item>
   </block>
 </swiper>
+
+ <!-- 菜单列表 -->
+<view class="menus">
+  <navigator url="" wx:for="{{menus}}" wx:key="{{index}}">
+    <image src="{{item}}"></image>
+  </navigator>
+</view>
+
+<!-- 楼层列表 -->
