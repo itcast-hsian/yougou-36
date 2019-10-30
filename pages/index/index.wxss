@@ -30,8 +30,8 @@
 }
 
 .menus image{
-  width: 100rpx;
-  height: 100rpx;
+  width: 128rpx;
+  height: 140rpx;
 }
 
 .floor-title image{

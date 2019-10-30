@@ -20,7 +20,7 @@
  <!-- 菜单列表 -->
 <view class="menus">
   <navigator url="" wx:for="{{menus}}" wx:key="{{index}}">
-    <image src="{{item}}"></image>
+    <image src="{{item.image_src}}"></image>
   </navigator>
 </view>
 
@@ -39,7 +39,7 @@
 
   <!-- 右侧的四张小图 -->
   <view class="right">
-    <navigator url="" wx:for="{{ [9,9,9,9] }}">
+    <navigator url="" wx:for="{{ [9,9,9,9] }}" wx:key="{{index}}">
       <image src="https://cdn.pinduoduo.com/home/static/img/subject/food.jpg"></image>
     </navigator>
   </view>
