@@ -28,3 +28,33 @@
   width: 100rpx;
   height: 100rpx;
 }
+
+.floor-title image{
+  width:100%;
+  height: 60rpx;
+}
+
+
+.floor{
+  display: flex;
+  justify-content: space-between;
+  padding:16rpx;
+}
+
+.floor .left image{
+  width: 232rpx;
+  height: 390rpx;
+}
+
+.floor .right{
+  flex:1;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-left: 20rpx;
+}
+
+.floor .right image{
+  width:230rpx;
+  height: 190rpx;
+}
