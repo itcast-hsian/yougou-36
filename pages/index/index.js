@@ -3,11 +3,7 @@ import request from "../../utils/request.js"
 Page({
 
   data: {
-    banners: [
-      "https://cdn.pinduoduo.com/home/static/img/subject/girlclothes.jpg",
-      "https://cdn.pinduoduo.com/home/static/img/subject/boyshirt.jpg",
-      "https://cdn.pinduoduo.com/home/static/img/subject/medical.jpg"
-    ],
+    banners: [],
 
     menus: [
       "../../images/cart_empty@2x.png",
@@ -23,7 +19,11 @@ Page({
     request({
       url: "/api/public/v1/home/swiperdata"
     }).then(res => {
-      console.log(res)
+      const {message} = res.data;
+      // 赋值给data
+      this.setData({
+        banners: message
+      })
     })
   }
 

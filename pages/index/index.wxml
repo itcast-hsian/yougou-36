@@ -12,7 +12,7 @@
 <!-- block不会渲染到页面上，只是用来循环 -->
   <block wx:for="{{banners}}" wx:key="{{index}}">
     <swiper-item>
-      <image src="{{item}}" mode="aspectFill"></image>
+      <image src="{{item.image_src}}" mode="aspectFill" class="banner-image"></image>
     </swiper-item>
   </block>
 </swiper>
