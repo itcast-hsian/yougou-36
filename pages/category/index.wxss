@@ -41,3 +41,35 @@ page{
   left: 0;
   top: 20rpx;
 }
+
+.content{
+  flex: 1;
+  padding: 20rpx;
+  overflow-y: scroll;
+}
+
+.brand-title{
+  margin: 20rpx 0;
+  text-align: center;
+}
+
+.brands{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.brand-item{
+  width:33.33%;
+  padding:20rpx;
+  box-sizing: border-box;
+}
+
+.brand-item image{
+  width:100%;
+  max-height: 200rpx;
+}
+
+.brand-text{
+  font-size: 12px;
+  text-align: center;
+}

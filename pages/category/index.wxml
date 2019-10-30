@@ -15,6 +15,20 @@
 
   <!-- 右边的品牌列表 -->
   <view class="content">
-    会变的内容 {{current}}
+    
+    <!-- 标题 -->
+    <view class="brand-title">电视</view>
+
+    <view class="brands">
+      <navigator 
+      url="" 
+      class="brand-item" 
+      wx:for="{{ [1,1,1,1,1,1,1,1,1,1,1,1] }}"
+      wx:key="{{index}}">
+        <image src="https://t00img.yangkeduo.com/goods/images/2019-08-01/777f7ec5bf3db9fde7aec13478b2eb16.jpeg" mode="aspectFill"></image>
+        <view class="brand-text">曲面电视</view>
+      </navigator>
+    </view>
+
   </view>
 </view>
