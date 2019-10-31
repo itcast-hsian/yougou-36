@@ -50,7 +50,7 @@
 					"id": 0,
 					"name": "pages/goods_detail/index",
 					"pathName": "pages/goods_detail/index",
-					"query": "query=小米",
+					"query": "goods_id=57444",
 					"scene": null
 				}
 			]

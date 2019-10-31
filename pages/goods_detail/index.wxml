@@ -1,20 +1,20 @@
 <!-- 轮播图 -->
 <swiper indicator-dots class="swiper">
-  <block wx:for="{{ [1,1,1] }}" wx:key="{{index}}">
+  <block wx:for="{{ detail.pics }}" wx:key="{{index}}">
     <swiper-item>
-      <image src="https://tuniupic.360buyimg.com/fb2/t1/G5/M00/37/43/Cii-sluvNc6IbUu0AANUvjx8OzQAAOcSgE_v-8AA1TW038_w755_h0_c0_t0.jpg" mode="aspectFill"></image>
+      <image src="{{item.pics_big}}" mode="aspectFill"></image>
     </swiper-item>
   </block>
 </swiper>
 
 <!-- 商品信息 -->
 <view class="goods-info">
-  <view class="goods-price">￥279</view>
+  <view class="goods-price">￥{{ detail.goods_price }}</view>
 
    <!-- 标题部分 -->
   <view class="goods-title">
     <view class="goods-title-left">
-      严济堂维生素C咀嚼片维c片vc中老年成人儿童补充维生素c片正品充维生素c片正品充维生素c片正品
+      {{ detail.goods_name }}
     </view>
 
     <view class="goods-star">
@@ -26,4 +26,5 @@
   <view class="express">快递： 免运费</view>
 </view>
 
-<!-- 商品详情 -->
+<!-- 商品详情, bodes香丹云v-html的作用 -->
+<rich-text nodes="{{detail.goods_introduce}}"></rich-text>
