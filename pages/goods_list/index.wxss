@@ -67,3 +67,10 @@
 .goods-price{
   color:red;
 }
+
+.loading{
+  padding: 20rpx;
+  color:#ccc;
+  text-align: center;
+  font-size:14px;
+}
