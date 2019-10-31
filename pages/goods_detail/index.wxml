@@ -31,6 +31,9 @@
 
 <!-- 底部按钮 -->
 <view class="footer">
+  <!-- 打开客服窗口，隐藏覆盖在联系客服按钮上 -->
+  <button class="contact" open-type="contact" type="primary">打开微信原生客服回话</button>
+
   <view class="btn-left">
     <view class='iconfont icon-kefu'></view>
     <view>联系客服</view>

@@ -68,6 +68,15 @@
   display: flex;
 }
 
+.contact{
+  position: absolute;
+  left:0;
+  top:0;
+  width: 20%;
+  height:100rpx;
+  opacity: 0;
+}
+
 .btn-left{
   width:20%;
   display: flex;
