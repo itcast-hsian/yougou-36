@@ -3,7 +3,7 @@
   <view class="search-input">
   <!-- 小程序原生的组件 -->
     <icon type="search" size="16"></icon>
-    搜索
+    {{query}}
   </view>
 </view>
 

@@ -24,7 +24,7 @@
 
       <view class="brands">
         <navigator 
-        url="" 
+        url="/pages/goods_list/index?query={{ item.cat_name }}" 
         class="brand-item" 
         wx:for="{{ item.children }}"
         wx:key="{{index}}">
