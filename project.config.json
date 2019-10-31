@@ -48,9 +48,9 @@
 			"list": [
 				{
 					"id": 0,
-					"name": "pages/goods_list/index",
-					"pathName": "pages/goods_list/index",
-					"query": "query=曲面电视",
+					"name": "pages/goods_detail/index",
+					"pathName": "pages/goods_detail/index",
+					"query": "query=小米",
 					"scene": null
 				}
 			]

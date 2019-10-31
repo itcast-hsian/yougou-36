@@ -1,0 +1,29 @@
+<!-- 轮播图 -->
+<swiper indicator-dots class="swiper">
+  <block wx:for="{{ [1,1,1] }}" wx:key="{{index}}">
+    <swiper-item>
+      <image src="https://tuniupic.360buyimg.com/fb2/t1/G5/M00/37/43/Cii-sluvNc6IbUu0AANUvjx8OzQAAOcSgE_v-8AA1TW038_w755_h0_c0_t0.jpg" mode="aspectFill"></image>
+    </swiper-item>
+  </block>
+</swiper>
+
+<!-- 商品信息 -->
+<view class="goods-info">
+  <view class="goods-price">￥279</view>
+
+   <!-- 标题部分 -->
+  <view class="goods-title">
+    <view class="goods-title-left">
+      严济堂维生素C咀嚼片维c片vc中老年成人儿童补充维生素c片正品充维生素c片正品充维生素c片正品
+    </view>
+
+    <view class="goods-star">
+      <view class="iconfont icon-shoucang"></view>
+      <text>收藏</text>
+    </view>
+  </view>
+
+  <view class="express">快递： 免运费</view>
+</view>
+
+<!-- 商品详情 -->
