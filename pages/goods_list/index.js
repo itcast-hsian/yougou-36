@@ -45,12 +45,20 @@ Page({
       // goods是商品列表
       const { goods } = res.data.message;
 
+      // 判断是否到最后一页
+      if(goods.length < 10){
+        this.setData({
+          hasMore: false
+        })
+      }
+
       // 循环给每个商品价格保留两位小数点
       const newGoods = goods.map(v => {
         v.goods_price = Number(v.goods_price).toFixed(2);
         return v;
       })
 
+      // 合并数组
       this.setData({
         goods: [...this.data.goods, ...newGoods]
       })
@@ -59,11 +67,15 @@ Page({
 
   // 触底事件
   onReachBottom(){
-    // 请求下一页的数据
-    this.setData({
-      pagenum: this.data.pagenum + 1
-    })
-    this.getList();
+
+    // 有更多数据时候才请求下一页的数据
+    if(this.data.hasMore){
+      // 请求下一页的数据
+      this.setData({
+        pagenum: this.data.pagenum + 1
+      })
+      this.getList();
+    }
   }
 
 })
