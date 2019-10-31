@@ -1,3 +1,5 @@
+import request from "../../utils/request.js"
+
 // pages/goods_list/index.js
 Page({
 
@@ -5,7 +7,10 @@ Page({
    * 页面的初始数据
    */
   data: {
-    query: ""
+    // url搜索关键字，分类页传递过来的
+    query: "",
+    // 商品列表，接口请求回来的
+    goods: []
   },
 
   /**
@@ -19,8 +24,28 @@ Page({
       query
     });
 
-    // 请求列表数据 123
-    console.log(options)
+    // 请求列表数据 
+    request({
+      url: "/api/public/v1/goods/search",
+      data: {
+        query,
+        pagenum: 1,
+        pagesize: 10
+      }  
+    }).then(res => {
+      // goods是商品列表
+      const {goods} = res.data.message;
+
+      // 循环给每个商品价格保留两位小数点
+      const newGoods = goods.map(v => {
+        v.goods_price = Number(v.goods_price).toFixed(2);
+        return v;
+      })
+
+      this.setData({
+        goods: newGoods
+      })
+    })
   },
 
 })

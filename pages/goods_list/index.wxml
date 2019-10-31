@@ -15,17 +15,21 @@
 </view>
 
 <!-- 可以循环的商品列表 -->
-<navigator url="" class="goods-item">
-  <image src="https://img12.360buyimg.com/jdcms/s300x300_jfs/t9997/121/2999777164/216621/c4ff1461/5cde59bcN3a252cba.jpg.webp" mode="aspectFill"></image>
+<navigator 
+wx:for="{{goods}}"
+wx:key="{{index}}"
+url="" 
+class="goods-item">
+  <image src="{{ item.goods_small_logo }}" mode="aspectFill"></image>
 
   <!-- 商品列表的右侧 -->
   <view class="goods-item-right">
     <view class="goods-title">
-      久林 餐桌 实木餐桌 圆形餐桌椅组合 中式大圆桌带转盘家用夕桌 浅胡桃色 1.3米 餐桌
+      {{ item.goods_name }}
     </view>
 
     <view class="goods-price">
-      ￥99.00
+      ￥{{ item.goods_price }}
     </view>
   </view>
 </navigator> 
