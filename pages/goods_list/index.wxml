@@ -1,0 +1,31 @@
+<!-- 搜索栏 -->
+<view class="search">
+  <view class="search-input">
+  <!-- 小程序原生的组件 -->
+    <icon type="search" size="16"></icon>
+    搜索
+  </view>
+</view>
+
+ <!-- 头部排序 -->
+<view class="goods-sort">
+  <view class="active">综合</view>
+  <view>销量</view>
+  <view>价格</view>
+</view>
+
+<!-- 可以循环的商品列表 -->
+<navigator url="" class="goods-item">
+  <image src="https://img12.360buyimg.com/jdcms/s300x300_jfs/t9997/121/2999777164/216621/c4ff1461/5cde59bcN3a252cba.jpg.webp" mode="aspectFill"></image>
+
+  <!-- 商品列表的右侧 -->
+  <view class="goods-item-right">
+    <view class="goods-title">
+      久林 餐桌 实木餐桌 圆形餐桌椅组合 中式大圆桌带转盘家用夕桌 浅胡桃色 1.3米 餐桌
+    </view>
+
+    <view class="goods-price">
+      ￥99.00
+    </view>
+  </view>
+</navigator> 

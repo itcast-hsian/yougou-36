@@ -1,0 +1,69 @@
+/* pages/goods_list/index.wxss */
+.search{
+  background:#eee;
+  padding: 20rpx;
+}
+
+.search .search-input{
+  background: #fff;
+  height:60rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 14px;
+  color:#999;
+  border-radius: 4px;
+  padding: 0 20rpx;
+}
+
+.search .search-input icon{
+  margin-right:10rpx;
+}
+
+
+.goods-sort{
+  display: flex;
+  padding: 20rpx;
+  justify-content: space-around;
+  font-size: 14px;
+  border-bottom:1px #ddd solid;
+}
+
+.goods-sort .active{
+  color:red;
+}
+
+.goods-item{
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx;
+  border-bottom:1px #ddd solid;
+}
+
+.goods-item image{
+  width:200rpx;
+  height:200rpx;
+}
+
+.goods-item-right{
+  flex:1;
+  padding-left:20rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.goods-title{
+  font-size:14px;
+  
+  overflow:hidden;
+  text-overflow:ellipsis;
+  display:-webkit-box;
+  /*控制在3行*/
+  -webkit-line-clamp:2;
+  -webkit-box-orient:vertical;
+}
+
+.goods-price{
+  color:red;
+}
