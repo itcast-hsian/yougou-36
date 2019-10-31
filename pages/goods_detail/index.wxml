@@ -26,5 +26,23 @@
   <view class="express">快递： 免运费</view>
 </view>
 
-<!-- 商品详情, bodes香丹云v-html的作用 -->
+<!-- 商品详情, nodes相当于v-html的作用 -->
 <rich-text nodes="{{detail.goods_introduce}}"></rich-text>
+
+<view class="footer">
+  <view class="btn-left">
+    <view class='iconfont icon-kefu'></view>
+    <view>联系客服</view>
+  </view>
+  <navigator url="/pages/cart/index" open-type="switchTab" class="btn-left">
+    <view class='iconfont icon-kefu'></view>
+    <view>购物车</view>
+  </navigator>
+
+  <view class="btn-right">
+    加入购物车
+  </view>
+   <view class="btn-right">
+    立即购买
+  </view>
+</view>
