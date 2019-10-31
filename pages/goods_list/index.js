@@ -19,7 +19,8 @@ Page({
       query
     });
 
-    // 请求列表数据
+    // 请求列表数据 123
+    console.log(options)
   },
 
 })

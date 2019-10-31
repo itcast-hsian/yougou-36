@@ -48,9 +48,9 @@
 			"list": [
 				{
 					"id": 0,
-					"name": "pages/category/index",
-					"pathName": "pages/category/index",
-					"query": "",
+					"name": "pages/goods_list/index",
+					"pathName": "pages/goods_list/index",
+					"query": "query=曲面电视",
 					"scene": null
 				}
 			]
