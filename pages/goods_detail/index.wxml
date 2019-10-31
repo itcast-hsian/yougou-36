@@ -27,15 +27,16 @@
 </view>
 
 <!-- 商品详情, nodes相当于v-html的作用 -->
-<rich-text nodes="{{detail.goods_introduce}}"></rich-text>
+<rich-text nodes="{{detail.goods_introduce}}" class="richtext"></rich-text>
 
+<!-- 底部按钮 -->
 <view class="footer">
   <view class="btn-left">
     <view class='iconfont icon-kefu'></view>
     <view>联系客服</view>
   </view>
   <navigator url="/pages/cart/index" open-type="switchTab" class="btn-left">
-    <view class='iconfont icon-kefu'></view>
+    <view class='iconfont icon-gouwuche'></view>
     <view>购物车</view>
   </navigator>
 
