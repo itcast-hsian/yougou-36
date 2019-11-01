@@ -26,7 +26,7 @@
 .cancel{
   border:1px #ddd solid;
   width: 120rpx;
-  line-height: 60rpx;
+  line-height: 58rpx;
   text-align: center;
   box-sizing: border-box;
   font-size: 14px;
