@@ -5,7 +5,10 @@ Page({
    * 页面的初始数据
    */
   data: {
-    showCancel: false
+    // 是否显示取消按钮
+    showCancel: false,
+    // 输入框的值
+    searchValue: ""
   },
 
   /**
@@ -25,7 +28,18 @@ Page({
     showCancel = value.trim() ? true : false
 
     this.setData({
-      showCancel
+      showCancel,
+      // 输入框的值
+      searchValue: value
+    })
+  },
+
+  // 点击取消按钮时候触发
+  handleCancel(){
+
+    this.setData({
+      showCancel: false,
+      searchValue: ""
     })
   }
 })

@@ -49,4 +49,5 @@
   background: #eee;
   margin: 20rpx 10rpx;
   padding: 3px 10px;
+  font-size:14px;
 }
