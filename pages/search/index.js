@@ -8,7 +8,9 @@ Page({
     // 是否显示取消按钮
     showCancel: false,
     // 输入框的值
-    searchValue: ""
+    searchValue: "",
+    // 搜素历史列表
+    keywords: wx.getStorageSync("search") || []
   },
 
   /**
@@ -55,8 +57,8 @@ Page({
     wx.setStorageSync('search', arr);
 
     // 跳转到搜索列表页
-    wx.navigateTo({
-      url: "/pages/goods_list/index?query=" + this.data.searchValue
-    })
+    // wx.navigateTo({
+    //   url: "/pages/goods_list/index?query=" + this.data.searchValue
+    // })
   }
 })

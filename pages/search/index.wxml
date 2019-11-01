@@ -21,16 +21,11 @@
 
 <!-- 历史搜索列表 -->
 <view class="history">
-  <view class="history-item">
-    小米
-  </view>
-  <view class="history-item">
-    小米水电费
-  </view>
-  <view class="history-item">
-    小米摄入个人股
-  </view>
-  <view class="history-item">
-    小米水电费水电费
-  </view>
+  <navigator 
+  class="history-item" 
+  wx:for="{{keywords}}" 
+  wx:key="{{index}}"
+  url="/pages/goods_list/index?query={{item}}">
+    {{ item }}
+  </navigator>
 </view>
