@@ -16,7 +16,7 @@
 <!-- 标题 -->
 <view class="h2">
   <view>历史搜索</view>
-  <icon type="clear" size="14"></icon>
+  <icon type="clear" size="14" bindtap="handleClear"></icon>
 </view>
 
 <!-- 历史搜索列表 -->

@@ -10,7 +10,7 @@ Page({
     // 输入框的值
     searchValue: "",
     // 搜素历史列表
-    keywords: wx.getStorageSync("search") || []
+    keywords: []
   },
 
   /**
@@ -18,6 +18,13 @@ Page({
    */
   onLoad: function (options) {
 
+  },
+
+  onShow(){
+    // 每次显示页面都从本地获取数据
+    this.setData({
+      keywords: wx.getStorageSync("search") || []
+    })
   },
 
   // 监听输入框输入时候的事件
@@ -57,8 +64,17 @@ Page({
     wx.setStorageSync('search', arr);
 
     // 跳转到搜索列表页
-    // wx.navigateTo({
-    //   url: "/pages/goods_list/index?query=" + this.data.searchValue
-    // })
+    wx.navigateTo({
+      url: "/pages/goods_list/index?query=" + this.data.searchValue
+    })
+  },
+
+  // 清除所有的本地数据
+  handleClear(){
+    wx.removeStorageSync('search');
+
+    this.setData({
+      keywords: []
+    })
   }
 })
