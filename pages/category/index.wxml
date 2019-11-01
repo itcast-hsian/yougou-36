@@ -20,7 +20,7 @@
     wx:for="{{ list[current].children }}"
     wx:key="{{index}}">
       <!-- 标题 -->
-      <view class="brand-title">{{ item.cat_name }}</view>
+      <view class="brand-title"><text>/ </text>{{ item.cat_name }}<text>/ </text></view>
 
       <view class="brands">
         <navigator 

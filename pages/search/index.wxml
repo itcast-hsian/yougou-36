@@ -1,0 +1,31 @@
+<!-- 搜索条的顶部 -->
+<view class="search-wrapper">
+  <view class="search-input">
+    <icon type="search" size="14"></icon>
+    <input placeholder="请输入您想要的商品"></input>
+  </view>
+
+  <view class="cancel">取消</view>
+</view>
+
+<!-- 标题 -->
+<view class="h2">
+  <view>历史搜索</view>
+  <icon type="clear" size="14"></icon>
+</view>
+
+<!-- 历史搜索列表 -->
+<view class="history">
+  <view class="history-item">
+    小米
+  </view>
+  <view class="history-item">
+    小米水电费
+  </view>
+  <view class="history-item">
+    小米摄入个人股
+  </view>
+  <view class="history-item">
+    小米水电费水电费
+  </view>
+</view>

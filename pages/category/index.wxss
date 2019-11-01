@@ -54,6 +54,11 @@ page{
   text-align: center;
 }
 
+.brand-title text{
+  color:#ddd;
+  margin: 0 10px;
+}
+
 .brands{
   display: flex;
   flex-wrap: wrap;
