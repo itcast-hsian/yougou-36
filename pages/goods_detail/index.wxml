@@ -43,10 +43,10 @@
     <view>购物车</view>
   </navigator>
 
-  <view class="btn-right">
+  <view class="btn-right" bindtap="handleAddCart">
     加入购物车
   </view>
-   <view class="btn-right">
+   <view class="btn-right" bindtap="handleAddCart">
     立即购买
   </view>
 </view>
