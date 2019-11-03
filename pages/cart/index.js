@@ -130,4 +130,20 @@ Page({
     // 保存到本地
     wx.setStorageSync("goods", goods);
   },
+
+  // 选中状态取反
+  handleSelected(event){
+    const {id} = event.target.dataset;
+    const {goods} = this.data;
+
+    // 把选中状态取反
+    goods[id].selected = !goods[id].selected;
+
+    this.setData({
+      goods
+    });
+
+    // 保存到本地
+    wx.setStorageSync("goods", goods);
+  }
 })

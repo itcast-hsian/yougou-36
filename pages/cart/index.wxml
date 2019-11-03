@@ -29,7 +29,13 @@
 
   <view class="goods-item" wx:for="{{goods}}" wx:key="{{index}}">
     <!-- 左侧的选中的状态 -->
-    <icon type="success" color="{{ item.selected ? 'red': 'gray' }}" size="14"></icon>
+    <icon 
+    type="success" 
+    color="{{ item.selected ? 'red': 'gray' }}" 
+    size="14"
+    bindtap="handleSelected"
+    data-id="{{ item.goods_id }}"
+    ></icon>
 
     <!-- 右侧的详细信息 -->
     <view class="goods-info">
