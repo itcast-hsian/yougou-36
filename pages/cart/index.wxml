@@ -1,2 +1,22 @@
-<!--pages/cart/index.wxml-->
-<text>pages/cart/index.wxml</text>
+<!-- 没有收获地址时候 -->
+<view class="address-bar"  wx:if="{{false}}">
+  <view>获取收货地址</view>
+  <view class="arrow"></view>
+</view>
+
+<!-- 有收获地址时候 -->
+<view class="address">
+  <view class="address-info">
+    <view>收货人：苏</view>
+
+    <view class="address-tel">
+      <text>13800000000</text>
+      <view class="arrow"></view>
+    </view>
+  </view>
+
+  <view class="address-detail">
+    收货地址：广东省吉山幼儿园
+  </view>
+  <image src="../../images/cart_border@2x.png" mode="aspectFill"></image>
+</view>

@@ -1,1 +1,39 @@
 /* pages/cart/index.wxss */
+.address-bar{
+  padding: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom:1px #ddd solid;
+}
+
+.arrow{
+  width:10px;
+  height:10px;
+  border-top: 1px #999 solid;
+  border-right: 1px #999 solid;
+  transform: rotate(45deg);
+  margin-right:6px;
+}
+
+.address-info{
+  padding:20rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.address-tel{
+  display: flex;
+  align-items: center;
+}
+
+.address-detail{
+  padding:20rpx;
+  padding-top:0;
+}
+
+.address image{
+ height:14rpx;
+ width:100%; 
+}
