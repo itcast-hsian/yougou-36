@@ -81,7 +81,7 @@
     <view class="btm">包含运费</view>
   </view>
 
-  <view class="checkout">
+  <view class="checkout" bindtap="handleSubmit">
     结算
   </view>
 </view>
