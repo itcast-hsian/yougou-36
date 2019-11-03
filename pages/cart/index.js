@@ -35,5 +35,32 @@ Page({
     this.setData({
       goods
     });
-  }
+  },
+
+  // 数量减1
+  handleReduce(){
+
+  },
+
+  // 输入框输入数量
+  handleInput(){
+
+  },
+
+  // 数量加1
+  handleAdd(event) {
+    const {id} = event.target.dataset;
+    const {goods} = this.data;
+
+    // 数量加一
+    goods[id].number += 1;
+
+    // 修改data的值
+    this.setData({
+      goods
+    });
+
+    // 保存到本地
+    wx.setStorageSync("goods", goods);
+  },
 })
