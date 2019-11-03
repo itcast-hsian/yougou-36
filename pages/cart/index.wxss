@@ -40,6 +40,7 @@
 
 .goods-list{
   border-top:20rpx #eee  solid;
+  padding-bottom:100rpx;
 }
 
 .goods-item{
@@ -113,4 +114,50 @@
 .info-num-btn{
   padding:5rpx 20rpx;
   border:1px #ddd solid;
+}
+
+.footer{
+  height:100rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  bottom:0;
+  left: 0;
+  width:100%;
+  border-top:1px #eee solid;
+}
+
+.footer-left{
+  display: flex;
+  align-items: center;
+  padding: 0 20rpx;
+}
+
+.footer-left icon{
+  margin-right:20rpx;
+}
+
+.footer-center{
+  flex:1;
+  padding: 0 20rpx;
+
+}
+
+.footer-center .btm{
+  font-size:12px;
+  color:#999;
+}
+
+.footer-center text{
+  color:red;
+}
+
+.checkout{
+  width:200rpx;
+  height: 100rpx;
+  line-height:100rpx;
+  text-align: center;
+  background:red;
+  color:white;
 }
