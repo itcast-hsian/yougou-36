@@ -38,8 +38,41 @@ Page({
   },
 
   // 数量减1
-  handleReduce(){
+  handleReduce(event){
+    const { id } = event.target.dataset;
+    const { goods } = this.data;
 
+    // 判断数量是否小于1
+    if (goods[id].number <= 1){
+      wx.showModal({
+        title: '提示',
+        content: '是否要删除商品？',
+        success:(res) => {
+          if (res.confirm) {
+            // 删除商品
+            delete goods[id];
+            // 由于showModal是异步执行，所以需要把修改data值的方式放到success中
+
+            // 修改data的值
+            this.setData({
+              goods
+            });
+            // 保存到本地
+            wx.setStorageSync("goods", goods);
+          }
+        }
+      })
+    }else{
+      // 数量减1
+      goods[id].number -= 1;
+      // 修改data的值
+      this.setData({
+        goods
+      });
+
+      // 保存到本地
+      wx.setStorageSync("goods", goods);
+    }
   },
 
   // 输入框输入数量
