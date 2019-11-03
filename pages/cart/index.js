@@ -10,7 +10,9 @@ Page({
     // 购物车商品列表
     goods: null,
     // 总价格
-    allPrice: 0
+    allPrice: 0,
+    // 是否全选
+    allSelected: true
   },
 
   // 获取收货地址
@@ -40,6 +42,8 @@ Page({
 
     // 计算总价格
     this.handleAllPrice();
+    // 判断全选状态
+    this.handleAllSelected();
   },
 
   // 数量减1
@@ -160,8 +164,9 @@ Page({
     wx.setStorageSync("goods", goods);
     // 计算总价格
     this.handleAllPrice();
+    // 判断全选状态
+    this.handleAllSelected();
   },
-
 
   // 注意小程序没有computed属性，所以需要封装计算总价格的函数
   handleAllPrice(){
@@ -180,5 +185,42 @@ Page({
     this.setData({
       allPrice: price
     })
+  },
+
+  // 全选状态
+  handleAllSelected(){
+    const { goods } = this.data;
+    let isSelect = true;
+
+    // 判断是否有一个是没选中
+    Object.keys(goods).forEach(v => {
+      if(!goods[v].selected){
+        isSelect = false;
+      }
+    })
+
+    this.setData({
+      allSelected: isSelect
+    })
+  },
+
+  // 点击全选按钮的事件
+  handleAllSelectedEvent(){
+    const { goods, allSelected } = this.data;
+
+    // 循环取反选中状态，取反是根据allSelected
+    Object.keys(goods).forEach(v => {
+      goods[v].selected = !allSelected
+    })
+
+    this.setData({
+      goods,
+      // 判断全选状态
+      allSelected: !allSelected
+    });
+    // 保存到本地
+    wx.setStorageSync("goods", goods);
+    // 计算总价格
+    this.handleAllPrice();
   }
 })

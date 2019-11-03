@@ -69,8 +69,11 @@
 </view>
 
 <view class="footer">
-  <view class="footer-left">
-    <icon type="success" color="red" size="14"></icon> 全选
+  <view class="footer-left" bindtap="handleAllSelectedEvent">
+    <icon 
+    type="success" 
+    color="{{ allSelected ? 'red' : 'gray' }}" 
+    size="14"></icon> 全选
   </view>
 
   <view class="footer-center">
