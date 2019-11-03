@@ -74,7 +74,7 @@
   </view>
 
   <view class="footer-center">
-    <view class="top">合计: <text>￥ 180000</text></view>
+    <view class="top">合计: <text>￥ {{allPrice}}</text></view>
     <view class="btm">包含运费</view>
   </view>
 
