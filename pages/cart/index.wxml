@@ -1,22 +1,22 @@
 <!-- 没有收获地址时候 -->
-<view class="address-bar"  wx:if="{{false}}">
+<view class="address-bar" bindtap="handleAddress" wx:if="{{!address.userName}}">
   <view>获取收货地址</view>
   <view class="arrow"></view>
 </view>
 
 <!-- 有收获地址时候 -->
-<view class="address">
+<view class="address"  wx:if="{{address.userName}}">
   <view class="address-info">
-    <view>收货人：苏</view>
+    <view>收货人：{{ address.userName }}</view>
 
     <view class="address-tel">
-      <text>13800000000</text>
+      <text>{{address.telNumber}}</text>
       <view class="arrow"></view>
     </view>
   </view>
 
   <view class="address-detail">
-    收货地址：广东省吉山幼儿园
+    收货地址：{{address.detail}}
   </view>
   <image src="../../images/cart_border@2x.png" mode="aspectFill"></image>
 </view>
