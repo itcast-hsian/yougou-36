@@ -40,7 +40,7 @@ Page({
     const { goods_id, goods_name, goods_small_logo, goods_price} = this.data.detail;
 
     // 判断商品是否已经在购物车中
-    
+    const number = goods[goods_id] ? goods[goods_id].number + 1 : 1;
 
     // 前面四个属性是商品详情提供的（需要在购物车页面中渲染）
     // number和selected属性是自己定义给购物车页面使用的
@@ -51,9 +51,11 @@ Page({
       goods_small_logo,
       goods_price,
 
-      number: 1,
+      number,
       selected: true
     }
+
+    console.log(goods, 456)
 
     // 保存到本地
     wx.setStorageSync("goods", goods)
