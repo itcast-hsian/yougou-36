@@ -21,29 +21,33 @@
   <image src="../../images/cart_border@2x.png" mode="aspectFill"></image>
 </view>
 
-<view class="goods-list">
+<!-- 购物车为空 -->
+<view  wx:if="{{!goods}}" class="empty">购物车为空</view>
 
-  <view class="goods-item">
+<!-- 购物车有数据 -->
+<view class="goods-list" wx:if="{{goods}}">
+
+  <view class="goods-item" wx:for="{{goods}}">
     <!-- 左侧的选中的状态 -->
-    <icon type="success" color="red" size="14"></icon>
+    <icon type="success" color="{{ item.selected ? 'red': 'gray' }}" size="14"></icon>
 
     <!-- 右侧的详细信息 -->
     <view class="goods-info">
-      <image src="https://img11.360buyimg.com/mobilecms/s280x280_jfs/t1/76752/34/2224/496652/5d0834f9E3ae35948/44282f48cc5f6abd.jpg.webp" mode="aspectFill"></image>
+      <image src="{{ item.goods_small_logo }}" mode="aspectFill"></image>
 
       <!-- 右侧标题价格数量部分 -->
       <view class="info-right">
         <view class="info-title">
-          迪士尼（Disney）儿童遮阳帽春夏季太阳帽小孩帽子男童女童帽防晒棒球帽 479-B款米奇水蓝 54cm-适合5-14岁
+          {{ item.goods_name }}
         </view>
 
         <!-- 价格和数量 -->
         <view class="info-bottom">
-          <view class="info-price">￥666</view>
+          <view class="info-price">￥{{ item.goods_price }}</view>
           <!-- 加减数量 -->
           <view class="info-num">
             <view class="info-num-btn">-</view>
-            <input value="1"></input>
+            <input value="{{ item.number }}"></input>
             <view class="info-num-btn">+</view>
           </view>
         </view>
