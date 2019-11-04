@@ -30,6 +30,9 @@ Page({
             detail: res.provinceName + res.cityName + res.countyName + res.detailInfo
           }
         })
+
+        // 把收获地址保存到本地
+        wx.setStorageSync("address", this.data.address);
       }
     })
   },

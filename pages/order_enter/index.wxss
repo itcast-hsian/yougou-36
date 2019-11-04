@@ -1,1 +1,163 @@
-/* pages/order_enter/index.wxss */
+/* pages/cart/index.wxss */
+.address-bar{
+  padding: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom:1px #ddd solid;
+}
+
+.arrow{
+  width:10px;
+  height:10px;
+  border-top: 1px #999 solid;
+  border-right: 1px #999 solid;
+  transform: rotate(45deg);
+  margin-right:6px;
+}
+
+.address-info{
+  padding:20rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.address-tel{
+  display: flex;
+  align-items: center;
+}
+
+.address-detail{
+  padding:20rpx;
+  padding-top:0;
+}
+
+.address image{
+ height:14rpx;
+ width:100%; 
+}
+
+.goods-list{
+  border-top:20rpx #eee  solid;
+  padding-bottom:100rpx;
+}
+
+.goods-item{
+  padding:20rpx;
+  border-bottom:1px #ddd solid;
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+}
+
+
+
+.goods-item icon{
+  margin:0 20rpx;
+}
+
+.goods-info{
+  flex:1;
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+  margin-left:20rpx;
+}
+
+.goods-info image{
+  width: 160rpx;
+  height: 160rpx;
+  display: block;
+  margin-right:20rpx;
+}
+
+.info-right{
+  height:180rpx;
+  flex:1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.info-title{ 
+  font-size: 14px;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  display:-webkit-box;
+  /*控制在3行*/
+  -webkit-line-clamp:2;
+  -webkit-box-orient:vertical;
+}
+
+.info-bottom{
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+}
+
+.info-price{
+  font-size: 16px;
+  color:red;
+}
+
+.info-num{
+  display: flex;
+  align-items:center;
+}
+
+.info-num input{
+  width:60px;
+  text-align: center;
+}
+
+.info-num-btn{
+  padding:5rpx 20rpx;
+  border:1px #ddd solid;
+}
+
+.footer{
+  height:100rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  bottom:0;
+  left: 0;
+  width:100%;
+  border-top:1px #eee solid;
+}
+
+.footer-left{
+  display: flex;
+  align-items: center;
+  padding: 0 20rpx;
+}
+
+.footer-left icon{
+  margin-right:20rpx;
+}
+
+.footer-center{
+  flex:1;
+  padding: 0 20rpx;
+
+}
+
+.footer-center .btm{
+  font-size:12px;
+  color:#999;
+}
+
+.footer-center text{
+  color:red;
+}
+
+.checkout{
+  width:200rpx;
+  height: 100rpx;
+  line-height:100rpx;
+  text-align: center;
+  background:red;
+  color:white;
+}

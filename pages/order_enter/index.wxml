@@ -1,2 +1,15 @@
-<!--pages/order_enter/index.wxml-->
-<text>pages/order_enter/index.wxml</text>
+<!-- 有收获地址时候 -->
+<view class="address" >
+  <view class="address-info">
+    <view>收货人：{{ address.userName }}</view>
+
+    <view class="address-tel">
+      <text>{{address.telNumber}}</text>
+    </view>
+  </view>
+
+  <view class="address-detail">
+    收货地址：{{address.detail}}
+  </view>
+  <image src="../../images/cart_border@2x.png" mode="aspectFill"></image>
+</view>
