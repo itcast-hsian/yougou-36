@@ -1,3 +1,5 @@
+import request from "../../utils/request.js"
+
 // pages/order_enter/index.js
 Page({
 
@@ -36,4 +38,30 @@ Page({
       allPrice: price
     })
   },
+
+  // 发起支付
+  handlePay(){
+    const {allPrice, address, goods} = this.data;
+
+    // 把goods对象的值合并成数组，并且给对象添加goods_number属性
+    const newGoods = Object.keys(goods).map(v => {
+      goods[v].goods_number = goods[v].number;
+      return goods[v];
+    })
+
+    request({
+      url: "/api/public/v1/my/orders/create",
+      method: "POST",
+      data: {
+        order_price: allPrice,
+        consignee_addr: address.detail,
+        goods: newGoods
+      },
+      header: {
+        Authorization: wx.getStorageSync('token')
+      }
+    }).then(res => {
+
+    })
+  }
 })
