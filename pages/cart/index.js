@@ -10,7 +10,7 @@ Page({
     // 收货地址
     address: {},
     // 购物车商品列表
-    goods: null,
+    goods: false,
     // 总价格
     allPrice: 0,
     // 是否全选
@@ -69,7 +69,7 @@ Page({
 
             // 判断对象是否是一个空对象
             if(Object.keys(goods).length === 0){
-              goods = null;
+              goods = false;
             }
 
             // 修改data的值
