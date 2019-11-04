@@ -48,7 +48,8 @@ Page({
       goods[v].goods_number = goods[v].number;
       return goods[v];
     })
-
+    
+    // 创建订单成功
     request({
       url: "/api/public/v1/my/orders/create",
       method: "POST",
@@ -61,7 +62,30 @@ Page({
         Authorization: wx.getStorageSync('token')
       }
     }).then(res => {
-
+       // 获取订单编号
+      const {order_number} = res.data.message;
+  
+      // 请求支付的参数
+      request({
+        url: "/api/public/v1/my/orders/req_unifiedorder",
+        method: "POST",
+        data: {
+          order_number
+        },
+        header: {
+          Authorization: wx.getStorageSync('token')
+        }
+      }).then(res => {
+        // pay是对象，对象里面包含了所有的支付参数
+        const {pay} = res.data.message;
+        // 发起支持，调用微信原生的支付窗口
+        wx.requestPayment({
+          ...pay,
+          success: () => {
+            // 把本地的goods列表中selected为true的商品删除掉
+          }
+        })
+      })
     })
   }
 })
