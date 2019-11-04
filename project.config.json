@@ -14,7 +14,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.9.0",
-	"appid": "wx1bc1bd0ed33ee0a3",
+	"appid": "wxfb52f2d7b2f6123a",
 	"projectname": "%E9%BB%91%E9%A9%AC%E4%BC%98%E8%B4%AD",
 	"debugOptions": {
 		"hidedInDevtools": []
@@ -48,8 +48,8 @@
 			"list": [
 				{
 					"id": 0,
-					"name": "pages/cart/index",
-					"pathName": "pages/cart/index",
+					"name": "pages/auth/index",
+					"pathName": "pages/auth/index",
 					"query": "goods_id=57444",
 					"scene": null
 				}

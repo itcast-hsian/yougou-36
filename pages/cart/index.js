@@ -51,7 +51,7 @@ Page({
   // 数量减1
   handleReduce(event){
     const { id } = event.target.dataset;
-    const { goods } = this.data;
+    let { goods } = this.data;
 
     // 判断数量是否小于1
     if (goods[id].number <= 1){
@@ -63,6 +63,11 @@ Page({
             // 删除商品
             delete goods[id];
             // 由于showModal是异步执行，所以需要把修改data值的方式放到success中
+
+            // 判断对象是否是一个空对象
+            if(Object.keys(goods).length === 0){
+              goods = null;
+            }
 
             // 修改data的值
             this.setData({
@@ -232,27 +237,40 @@ Page({
     // wx.setStorageSync("goods", goods);
   },
 
+  // 提交
   handleSubmit(){
-    const { allPrice, address, goods } = this.data;
+    // 测试提交
+    // const { allPrice, address, goods } = this.data;
 
-    // 提取对象的value合并成数组
-    const goodsArr = Object.keys(goods).map(v => {
-      // 把数量赋值给goods_number，接口需要的
-      goods[v].goods_number = goods[v].number
-      return goods[v];
-    })
+    // // 提取对象的value合并成数组
+    // const goodsArr = Object.keys(goods).map(v => {
+    //   // 把数量赋值给goods_number，接口需要的
+    //   goods[v].goods_number = goods[v].number
+    //   return goods[v];
+    // })
 
-    // 提交到订单
-    request({
-      url: "/api/public/v1/my/orders/create",
-      method: "POST",
-      data: {
-        order_price: allPrice,
-        consignee_addr: address.detail, // 一般情况地址是个对象，而不是一个字符串，接口问题
-        goods: goodsArr
-      }
-    }).then(res => {
-      console.log(res)
-    })
+    // // 提交到订单
+    // request({
+    //   url: "/api/public/v1/my/orders/create",
+    //   method: "POST",
+    //   data: {
+    //     order_price: allPrice,
+    //     consignee_addr: address.detail, // 一般情况地址是个对象，而不是一个字符串，接口问题
+    //     goods: goodsArr
+    //   }
+    // }).then(res => {
+    //   console.log(res)
+    // })
+
+    // 判断本地是否有token，有token就跳转到订单支付页，没有跳转到登录页
+    if(wx.getStorageSync("token")){
+      wx.navigateTo({
+        url: '/pages/order_enter/index',
+      })
+    }else{
+      wx.navigateTo({
+        url: '/pages/auth/index',
+      })
+    }
   }
 })
