@@ -13,3 +13,40 @@
   </view>
   <image src="../../images/cart_border@2x.png" mode="aspectFill"></image>
 </view>
+
+<!-- 购物车有数据 -->
+<view class="goods-list">
+  <view 
+  class="goods-item"
+   wx:for="{{goods}}" 
+   wx:key="{{index}}"
+   wx:if="{{item.selected}}">
+
+    <!-- 右侧的详细信息 -->
+    <view class="goods-info">
+      <image src="{{ item.goods_small_logo }}" mode="aspectFill"></image>
+
+      <!-- 右侧标题价格数量部分 -->
+      <view class="info-right">
+        <view class="info-title">
+          {{ item.goods_name }}
+        </view>
+
+        <!-- 价格和数量 -->
+        <view class="info-bottom">
+          <view class="info-price">￥{{ item.goods_price }}</view>
+          <!-- 加减数量 -->
+          <view class="info-num">
+            x {{item.number}} 件
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="allprice">总价格: {{allPrice}}</view>
+
+<view style="padding: 20rpx;">
+  <button type="primary" bindtap="handlePay">立即支付</button>
+</view>
