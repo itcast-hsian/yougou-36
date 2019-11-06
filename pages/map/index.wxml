@@ -1,0 +1,50 @@
+<!-- <input style="margin-top:10px;" bindinput="handleInput"></input>
+<button bindtap="nearby_search" type="primary">搜索</button> -->
+
+<form bindsubmit="formSubmit" >
+    <!--输入起点和目的地经纬度坐标，格式为string格式-->
+    <!--起点输入框,同终点，不填默认当前位置-->
+    <label>起点坐标：
+      <input 
+      style="border:1px solid #000;" 
+      name="start"
+      bindinput="getsuggest"
+      value="{{backfill}}"
+      data-type="start"
+      ></input>
+    </label>
+    <!--终点输入框,例：39.984060,116.307520-->
+    <label>终点坐标：
+      <input 
+      style="border:1px solid #000;" 
+      name="start"
+      bindinput="getsuggest"
+      value="{{backfill2}}"
+      data-type="end"
+      ></input>
+    </label>
+    <!--提交表单数据-->
+    <button form-type="submit" type="primary" style="margin-bottom:20rpx;">路线规划</button>
+</form>
+
+<view wx:for="{{suggestion}}" wx:key="index">
+    <!--绑定回填事件-->
+    <view>
+      <!--根据需求渲染相应数据-->
+      <!--渲染地址title-->
+      <view style="text-align:center;" bindtap="backfill" id="{{index}}">{{item.title}}</view>
+      <!--渲染详细地址-->
+      <view style="font-size:12px;color:#666;text-align:center;">{{item.addr}}</view>
+    </view>
+</view>
+
+<map id="map" 
+longitude="{{longitude}}"
+latitude="{{ latitude}}"
+scale="13"
+markers="{{markers}}"
+class="map"
+polyline="{{polyline}}"
+show-location>
+</map>
+

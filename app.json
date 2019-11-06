@@ -8,7 +8,8 @@
     "pages/goods_detail/index",
     "pages/search/index",
     "pages/auth/index",
-    "pages/order_enter/index"
+    "pages/order_enter/index",
+    "pages/map/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -17,6 +18,11 @@
     "navigationBarTextStyle": "white"
   },
   "sitemapLocation": "sitemap.json",
+  "permission": {
+    "scope.userLocation": {
+      "desc": "abc123"
+    }
+  },
   "tabBar": {
     "selectedColor": "#ff2d4a",
     "list": [
